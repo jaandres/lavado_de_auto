@@ -14,7 +14,7 @@
         <div class="navbar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
+                  <a class="navbar-brand" href="/lavado_de_auto//home.html">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -49,6 +49,152 @@
                 </div>
               </nav>
         </div>
+        <div class="col">
+                      <!--Formulario -->
+                      <label for="formulario">Ingrese los datos del cliente</label>
+                      <div class="container"> 
+                          <form action="">
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                  <label for="formulario" class="col-form-label">RUT</label>
+                                  </div>
+                                  <div class="col-2 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                                  <span class="separator">&#45;</span>
+                                  <div class="digito p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                                  <div class="col-auto mt-2">
+                                  <span class="form-text">
+                                      Debe ingresar dígito verificador.
+                                  </span>
+                                  </div>
+                              </div>
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Nombre</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Apellido</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                              </div>
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Dirección</label>
+                                  </div>
+                                  <div class="col-6 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                              </div>
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Comuna</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <select class="form-select form-select-lg" aria-label="Default select example">
+                                          <option selected>Seleccione Comuna</option>
+                                          <option value="1">Santiago Centro</option>
+                                          <option value="2">San Joaquín</option>
+                                          <option value="3">Renca</option>
+                                      </select>
+                                  </div>
+              
+                              </div>
+              
+                          </form>
+                      </div>
+                      <label for="formulario">Ingrese los datos del vehículo</label>
+                      <div class="container"> 
+                          <form action="">
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Tipo de Vehículo</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <select class="form-select form-select-lg" aria-label="Default select example">
+                                          <option selected>Seleccione tipo de vehículo</option>
+                                          <option value="1">Furgón</option>
+                                          <option value="2">Automóvil</option>
+                                          <option value="3">Camión</option>
+                                          <option value="4">Camioneta</option>
+                                          <option value="5">Moto</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Marca</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Modelo</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Año</label>
+                                  </div>
+                                  <div class="col-1 m-0 p-0">
+                                      <input type="text" class="form-control">
+                                  </div>
+                              </div>
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Revisión técnica al día:</label>
+                                      <input type="radio" name="customRadio" class="custom-control-input" id="custom-radio-1">
+                                      <label class="custom-control-input m-2" for="custom-radio-1">Si</label>
+                                      <input type="radio" name="customRadio" class="custom-control-input" id="custom-radio-2">
+                                      <label class="custom-control-input m-2" for="custom-radio-2">No</label>
+                                  </div>
+                              </div>
+              
+              
+                          </form>
+                      </div>
+                      <label for="formulario">Servicio</label>
+                      <div class="container"> 
+                          <form action="">
+                              <div class="row m-1 p-1">
+                                  <div class="col-auto">
+                                      <label for="formulario" class="col-form-label">Seleccione el Tipo de Servicio</label>
+                                  </div>
+                                  <div class="col-3 m-0 p-0">
+                                      <select class="form-select form-select-lg" aria-label="Default select example">
+                                          <option selected>Seleccione el servicio</option>
+                                          <option value="1">Lavado exterior e interior</option>
+                                          <option value="2">Lavado de motor</option>
+                                        </select>
+                                        
+                                  </div>
+                                  <div class="col-3">
+                                      <input type="text" class="form-control" id="costo" placeholder="Costo">
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                      <label for="formulario" class="col-form-label">Seleccione el Encargado del servicio</label>
+                      <div class="container">
+                          <form action="">
+                              <div class="col-3 m-0 p-0">
+                                  <select class="form-select form-select-lg" aria-label="Default select example">
+                                      <option selected>Seleccione el encargado</option>
+                                      <option value="1">Javier</option>
+                                      <option value="2">Douglas</option>
+                                    </select>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
     </div>
     
 <script src="/lavado_de_auto/assets/js/main.js"></script>
