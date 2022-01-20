@@ -1,61 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-CL">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavado de Autos</title>
+    <meta name="description" content="Proyecto lavado autos sustantiva"/>
+    <meta name="author" content="Douglas Daniel Guacarán Méndez, Javier Andrés Bruna Alvear"/>
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/jquery.js"></script>
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class=" col-12">
             <nav class="navbar navbar-expand navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="/home.html">Inicio</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Servicios</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                  </div>
+                    <a class="navbar-brand" href="/home.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Servicios</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
                 </div>
-              </nav>
+            </nav>
         </div>
         <div class="row text-center">
-          <div class="col">
+        <div class="col">
             <br>
-              <img src="/assets/img/logo-autolavado.png" alt="imagenauto">
+            <img src="/assets/img/logo-autolavado.png" alt="imagenauto">
             <br>
-          </div>
-
+        </div>
         </div>
         <div class="row">
-          <div class="col-12 form">
             <!--Formulario -->
-            <label for="formulario">Ingrese los datos del cliente</label>
-            <div class="container"> 
-                <form id="formulario">
+            <div class="col-12 container">
+                <form id="formulario" action="#" method="post">
+                    <label>Ingrese los datos del cliente</label>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                        <label for="formulario" class="col-form-label">RUT</label>
+                        <label class="col-form-label">RUT</label>
                         </div>
                         <div class="col-2 m-0 p-0">
-                            <input for="formulario" id="rut" for="formulario" type="text" class="form-control" required>
+                            <input name="rut" for="formulario" type="text" class="form-control" required>
                         </div>
                         <span class="separator">&#45;</span>
                         <div class="digito p-0">
-                            <input for="digito" id="digito" type="text" class="form-control">
+                            <input name="digito" id="digito" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto mt-2">
                         <span class="form-text">
@@ -65,33 +65,33 @@
                     </div>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Nombre</label>
+                            <label class="col-form-label">Nombre</label>
                         </div>
                         <div class="col-3 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="nombre" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Apellido</label>
+                            <label class="col-form-label">Apellido</label>
                         </div>
                         <div class="col-3 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="apellido" for="formulario" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Dirección</label>
+                            <label class="col-form-label">Dirección</label>
                         </div>
                         <div class="col-6 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="direccion" for="formulario" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Comuna</label>
+                            <label class="col-form-label">Comuna</label>
                         </div>
                         <div class="col-4 m-0 p-0">
                             <select class="form-select form-select-lg" aria-label="Default select example">
-                                <option selected>Seleccione Comuna</option>
+                                <option selected>seleccione comuna</option>
                                 <option value="1">Santiago Centro</option>
                                 <option value="2">San Joaquín</option>
                                 <option value="3">Renca</option>
@@ -99,14 +99,10 @@
                             </select>
                         </div>
                     </div>
-                </form>
-            </div>
-            <label for="formulario">Ingrese los datos del vehículo</label>
-            <div class="container"> 
-                <form action="">
+                    <label>Ingrese los datos del vehículo</label>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Tipo de Vehículo</label>
+                            <label  class="col-form-label">Tipo de Vehículo</label>
                         </div>
                         <div class="col-3 m-0 p-0">
                             <select class="form-select form-select-lg" aria-label="Default select example">
@@ -121,22 +117,22 @@
                     </div>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Marca</label>
+                            <label  class="col-form-label">Marca</label>
                         </div>
                         <div class="col-3 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="marca" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Modelo</label>
+                            <label  class="col-form-label">Modelo</label>
                         </div>
                         <div class="col-3 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="modelo" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Año</label>
+                            <label  class="col-form-label">Año</label>
                         </div>
                         <div class="col-1 m-0 p-0">
-                            <input type="text" class="form-control">
+                            <input name="año" for="formulario" type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row m-1 p-1">
@@ -148,11 +144,7 @@
                             <label class="custom-control-input m-2" for="custom-radio-2">No</label>
                         </div>
                     </div>
-                </form>
-            </div>
-            <label for="formulario">Servicio</label>
-            <div class="container"> 
-                <form action="">
+                    <label>Servicio</label>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
                             <label for="formulario" class="col-form-label">Seleccione el Tipo de Servicio</label>
@@ -168,11 +160,7 @@
                             <input type="text" class="form-control" id="costo" placeholder="Costo">
                         </div>
                     </div>
-                </form>
-            </div>
-            <label for="formulario" class="col-form-label">Seleccione el Encargado del servicio</label>
-            <div class="container">
-                <form action="">
+                    <label class="col-form-label">Seleccione el Encargado del servicio</label>
                     <div class="col-3 m-0 p-0">
                         <select class="form-select form-select-lg" aria-label="Default select example">
                             <option selected>Seleccione el encargado</option>
@@ -183,18 +171,16 @@
                 </form>
             </div>
         </div>
+        <div class="button col-12 text-center">
+            <button type="button" class="btn btn-primary">Enviar</button>
         </div>
-
-      <div class="button col-12 text-center">
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.6.0.js"></script>}
+    <script src='assets/js/bootstrap.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="/lavado_de_auto/assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src='assets/js/jquery-ui.js'></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
