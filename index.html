@@ -42,36 +42,34 @@
         </div>
         </div>
         <div class="row">
-            <!--Formulario -->
-            <div class="col-12 container">
+            <div class="col-12 container"> <!--Formulario -->
                 <form id="formulario" action="#" method="post">
                     <label>Ingrese los datos del cliente</label>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                        <label class="col-form-label">RUT</label>
+                            <label class="col-form-label">RUT</label>
                         </div>
                         <div class="col-2 m-0 p-0">
-                            <input name="rut" for="formulario" type="text" class="form-control" required>
+                            <input id="rut" name="rut" for="formulario" type="text" class="form-control" required>
                         </div>
                         <span class="separator">&#45;</span>
                         <div class="digito p-0">
-                            <input name="digito" id="digito" for="formulario" type="text" class="form-control">
+                            <input id="digito" name="digito" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto mt-2">
-                        <span class="form-text">
-                            Debe ingresar dígito verificador.
-                        </span>
+                            <span id="error" class="form-text">
+                            </span>
                         </div>
                     </div>
                     <div class="row m-1 p-1">
                         <div class="col-auto">
-                            <label class="col-form-label">Nombre</label>
+                            <label class="col-form-label">Nombre(s)</label>
                         </div>
                         <div class="col-3 m-0 p-0">
                             <input name="nombre" for="formulario" type="text" class="form-control">
                         </div>
                         <div class="col-auto">
-                            <label class="col-form-label">Apellido</label>
+                            <label class="col-form-label">Apellido(s)</label>
                         </div>
                         <div class="col-3 m-0 p-0">
                             <input name="apellido" for="formulario" type="text" class="form-control">
@@ -104,7 +102,7 @@
                         <div class="col-auto">
                             <label  class="col-form-label">Tipo de Vehículo</label>
                         </div>
-                        <div class="col-3 m-0 p-0">
+                        <div class="col-4 m-0 p-0">
                             <select class="form-select form-select-lg" aria-label="Default select example">
                                 <option selected>Seleccione tipo de vehículo</option>
                                 <option value="1">Furgón</option>
@@ -145,35 +143,50 @@
                         </div>
                     </div>
                     <label>Servicio</label>
-                    <div class="row m-1 p-1">
-                        <div class="col-auto">
-                            <label for="formulario" class="col-form-label">Seleccione el Tipo de Servicio</label>
+                    <div class="row mt-3">
+                        <div class="col-3">
+                            <label for="formulario">Seleccione el Tipo de Servicio</label>
                         </div>
-                        <div class="col-3 m-0 p-0">
+                        <div class="col-9 m-0 p-0">
+                            <div class="row m-0 p-0">
+                                <div class="col-4" aria-label="Default select example">
+                                    <input type="checkbox" id="lavado_ext_int">
+                                    <label >Lavado exterior e interior</label>
+                                </div>
+                                <div class="col-3" aria-label="Default select example">
+                                    <input type="checkbox" id="lavado_motor">
+                                    <label >Lavado de motor</label>
+                                </div>
+                                <div class="col-4">
+                                    <input class="form-control" id="costo" placeholder="Valor neto del servicio" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-4 mx-auto">
+                                <label> Total a Pagar</label>
+                                <input class="text-center" id="total" placeholder="Total mas IVA" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center mx-auto">
+                        <label class="col-form-label">Seleccione el Encargado del servicio</label>
+                        <div class="col-4 mx-auto">
                             <select class="form-select form-select-lg" aria-label="Default select example">
-                                <option selected>Seleccione el servicio</option>
-                                <option value="1">Lavado exterior e interior</option>
-                                <option value="2">Lavado de motor</option>
+                                <option selected>Seleccione el encargado</option>
+                                <option value="1">Javier</option>
+                                <option value="2">Douglas</option>
                             </select>
                         </div>
-                        <div class="col-3">
-                            <input type="text" class="form-control" id="costo" placeholder="Costo">
+                        <div class="button col-12 text-center m-2">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </div>
-                    <label class="col-form-label">Seleccione el Encargado del servicio</label>
-                    <div class="col-3 m-0 p-0">
-                        <select class="form-select form-select-lg" aria-label="Default select example">
-                            <option selected>Seleccione el encargado</option>
-                            <option value="1">Javier</option>
-                            <option value="2">Douglas</option>
-                        </select>
-                    </div>
+
                 </form>
             </div>
         </div>
-        <div class="button col-12 text-center">
-            <button type="button" class="btn btn-primary">Enviar</button>
-        </div>
+
     </div>
     
     <script src="assets/js/jquery-3.6.0.js"></script>}
