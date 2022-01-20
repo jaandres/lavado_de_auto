@@ -27,11 +27,11 @@ img {
   }
 
   a {
-      color:white;
+    color:gray;
   }
 
   a:hover { 
-    color:pink;
+    color:darkgray;
   }
 
 h1 {
