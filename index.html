@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto lavado autos sustantiva"/>
+    <meta name="author" content="Douglas Daniel Guacarán Méndez, Javier Andrés Bruna Alvear"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
+    <title>Lavado de Autos</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class=" col-12">
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Servicios</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row text-center">
+        <div class="col">
+            <br>
+            <img src="assets/img/autolavado.png" alt="autolavadoimg">
+            <br>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12 container"> <!--Formulario -->
+                <form id="formulario" action="#" method="post">
+                    <label>Ingrese los datos del cliente</label>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label class="col-form-label">RUT</label>
+                        </div>
+                        <div class="col-2 m-0 p-0">
+                            <input id="rut" name="rut" for="formulario" type="text" class="form-control" required>
+                        </div>
+                        <span class="separator">&#45;</span>
+                        <div class="digito p-0">
+                            <input id="digito" name="digito" for="formulario" type="text" class="form-control">
+                        </div>
+                        <div class="col-auto mt-2">
+                            <span id="error" class="form-text">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label class="col-form-label">Nombre(s)</label>
+                        </div>
+                        <div class="col-3 m-0 p-0">
+                            <input name="nombre" for="formulario" type="text" class="form-control">
+                        </div>
+                        <div class="col-auto">
+                            <label class="col-form-label">Apellido(s)</label>
+                        </div>
+                        <div class="col-3 m-0 p-0">
+                            <input name="apellido" for="formulario" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label class="col-form-label">Dirección</label>
+                        </div>
+                        <div class="col-6 m-0 p-0">
+                            <input name="direccion" for="formulario" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label class="col-form-label">Comuna</label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <select class="form-select form-select-lg" aria-label="Default select example">
+                                <option selected>seleccione comuna</option>
+                                <option value="1">Santiago Centro</option>
+                                <option value="2">San Joaquín</option>
+                                <option value="3">Renca</option>
+                                <option value="4">Maipú</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label>Ingrese los datos del vehículo</label>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label  class="col-form-label">Tipo de Vehículo</label>
+                        </div>
+                        <div class="col-4 m-0 p-0">
+                            <select class="form-select form-select-lg" aria-label="Default select example">
+                                <option selected>Seleccione tipo de vehículo</option>
+                                <option value="1">Furgón</option>
+                                <option value="2">Automóvil</option>
+                                <option value="3">Camión</option>
+                                <option value="4">Camioneta</option>
+                                <option value="5">Moto</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label  class="col-form-label">Marca</label>
+                        </div>
+                        <div class="col-3 m-0 p-0">
+                            <input name="marca" for="formulario" type="text" class="form-control">
+                        </div>
+                        <div class="col-auto">
+                            <label  class="col-form-label">Modelo</label>
+                        </div>
+                        <div class="col-3 m-0 p-0">
+                            <input name="modelo" for="formulario" type="text" class="form-control">
+                        </div>
+                        <div class="col-auto">
+                            <label  class="col-form-label">Año</label>
+                        </div>
+                        <div class="col-1 m-0 p-0">
+                            <input name="año" for="formulario" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row m-1 p-1">
+                        <div class="col-auto">
+                            <label for="formulario" class="col-form-label">Revisión técnica al día:</label>
+                            <input type="radio" name="customRadio" class="custom-control-input" id="custom-radio-1">
+                            <label class="custom-control-input m-2" for="custom-radio-1">Si</label>
+                            <input type="radio" name="customRadio" class="custom-control-input" id="custom-radio-2">
+                            <label class="custom-control-input m-2" for="custom-radio-2">No</label>
+                        </div>
+                    </div>
+                    <label>Servicio</label>
+                    <div class="row mt-3">
+                        <div class="col-3">
+                            <label for="formulario">Seleccione el Tipo de Servicio</label>
+                        </div>
+                        <div class="col-9 m-0 p-0">
+                            <div class="row m-0 p-0">
+                                <div class="col-4" aria-label="Default select example">
+                                    <input type="checkbox" id="lavado_ext_int">
+                                    <label >Lavado exterior e interior</label>
+                                </div>
+                                <div class="col-3" aria-label="Default select example">
+                                    <input type="checkbox" id="lavado_motor">
+                                    <label >Lavado de motor</label>
+                                </div>
+                                <div class="col-4">
+                                    <input class="form-control" id="costo" placeholder="Valor neto del servicio" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-4 mx-auto">
+                                <label> Total a Pagar</label>
+                                <input class="text-center" id="total" placeholder="Total mas IVA" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center mx-auto">
+                        <label class="col-form-label">Seleccione el Encargado del servicio</label>
+                        <div class="col-4 mx-auto">
+                            <select class="form-select form-select-lg" aria-label="Default select example">
+                                <option selected>Seleccione el encargado</option>
+                                <option value="1">Javier</option>
+                                <option value="2">Douglas</option>
+                            </select>
+                        </div>
+                        <div class="button col-12 text-center m-2">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src='assets/js/jquery-ui.js'></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
