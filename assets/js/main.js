@@ -103,7 +103,7 @@ $(document).ready(function () {
         if ( $("#digito").val() >= 0 ||  $("#digito").val() == ""){          
             mensaje.innerHTML = "";
             alert('Ingreso de orden correcto')
-            // $('#formulario')[0].reset();
+            $('#formulario')[0].reset();
         }
     } else {
       let mensaje = document.getElementById("error");
@@ -111,6 +111,7 @@ $(document).ready(function () {
       mensaje.innerHTML = "ingrese un digito del 0 a el 8 o una letra k";
     }
   }
+  
   })
   var userIdExistentes = [
       "17273455",
@@ -145,22 +146,19 @@ $(document).ready(function () {
     let valor_lavado_ext_int = 7000
     let valor_motor = 15000
 
-    if (lavado_ext_int.checked && lavado_motor.checked){
+    if (lavado_motor.checked && lavado_ext_int.checked){
       total.value = [(valor_lavado_ext_int+(valor_lavado_ext_int*iva))+(valor_motor+(valor_motor*iva))]
       costo.value = valor_lavado_ext_int + valor_motor 
-    } else if ( lavado_ext_int.checked && lavado_motor.unchecked){
+    } else if (lavado_ext_int.checked ){
       total.value = valor_lavado_ext_int+(valor_lavado_ext_int*iva);
       costo.value = valor_lavado_ext_int
-    }else if( lavado_motor.checked){
+    } else if ( lavado_motor.checked ){
       total.value = valor_motor+(valor_motor*iva);
       costo.value = valor_motor
-    } else if (lavado_ext_int.unchecked){
-      total.innerHTML = "Valor neto del servicio";
-      costo.innerHTML = "Total mas IVA";
     } else {
-      total.innerHTML = "Valor neto del servicio";
-      costo.innerHTML = "Total mas IVA";
+      costo.value = "Valor neto del servicio";
+      total.value = "Total mas IVA";
     }
-
+   
   });
 });
